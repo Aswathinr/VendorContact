@@ -1,0 +1,98 @@
+
+<div class="bg">
+    <br><br><br>
+<div class="container border border-secondary shadow-lg p-3 mb-5 bg-white rounded" 
+style="width:850px;max-width:850px;background-image: linear-gradient(to right,white, white);"> 
+    <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            rel="stylesheet">
+    
+    
+            <div class="container">
+                    <a routerLink="/home/vendorcontact"><img src="assets/back.png" style="width:30px;"/></a> 
+                    <h3 class="d-flex justify-content-center" style="color:rgb(15, 42, 121)">UPDATE VENDOR DETAILS</h3>
+                    <hr>
+                    <section id="cover">
+                <div class="form-group row">
+                 <div class="col-10">
+                  <input class="form-control" type="text" placeholder="alphabet only" pattern="/^[A-Za-z]+$/" hidden>
+                 </div>
+                  </div>
+                  <!-- <form [formGroup]="editVendorForm" novalidate (ngSubmit)="onSubmit()"></form> -->
+              <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label"> NAME *</label>
+                     <div class="col-10">
+                        <input class="form-control" type="text" placeholder="alphabet only"
+                         pattern="/^[A-Za-z]+$/"  [(ngModel)]="vendorcontact.vName"  autocomplete="off" required>
+                      </div>
+             </div>
+                                
+             <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">ADDRESS *</label>
+                  <div class="col-10">
+                     <input class="form-control" type="text" placeholder="alphabet only"
+                   [(ngModel)]="vendorcontact.vAddress" pattern="/^[A-Za-z]+$/" name="vAddress" autocomplete="off" required>
+                  </div>
+             </div>
+             <div class="form-group row">
+                 <label for="example-text-input" class="col-2 col-form-label">LOCATION *</label>
+                 <div class="col-10">
+                 <select class="form-control" [(ngModel)]="vendorcontact.vLocation" name="vLocation" required>                                                  
+                    <option>Trivandrum</option>
+                    <option>Chennai</option>
+                    <option>Bangalore</option>
+                 </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">SERVICE *</label>
+                        <div class="col-10">
+                            <input class="form-control" [(ngModel)]="vendorcontact.vService" name="vService" type="text" autocomplete="off" id="">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="example-datetime-local-input" class="col-2 col-form-label">PINCODE *</label>
+                        <div class="col-10">
+                            <input class="form-control" [(ngModel)]="vendorcontact.pincode" type="text" name="pincode"  id="" required>
+                        </div>
+                    </div><br/>
+
+                    <label style="margin-right:500px; font-weight: 150px; font-size:20px;color:rgb(15, 42, 121)"
+                     class="d-flex justify-content-center">CONTACT PERSON DETAILS</label>
+                    <hr>
+
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">NAME *</label>
+                        <div class="col-10">
+                                <input class="form-control" [(ngModel)]="vendorcontact.cName" name="cName" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">DEPARTMENT </label>
+                        <div class="col-10">
+                                <input class="form-control" [(ngModel)]="vendorcontact.department"  name="department" autocomplete="off" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="example-email-input" class="col-2 col-form-label">EMAIL *</label>
+                        <div class="col-10">
+                            <input class="form-control" [(ngModel)]="vendorcontact.email" name="email" type="email" autocomplete="off" id="">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="example-tel-input" class="col-2 col-form-label">PHONE *</label>
+                        <div class="col-10">
+                            <input class="form-control" type="tel" name="phone" [(ngModel)]="vendorcontact.phone" id="" pattern ="/^\d{10}$/" required>
+                        </div>
+                    </div>
+        
+                    <a routerLink="/home/vendorcontact" style="margin-left:300px" (click)="updateVendor()" type="button" class="btn btn-primary">UPDATE</a>
+                    </section>
+                    </div>
+                    </div>
+                    <br><br>
+                            
+
